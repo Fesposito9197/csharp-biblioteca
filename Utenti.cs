@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+using static System.Environment;
 
 
 
@@ -25,6 +25,11 @@ public class Utenti
         this.recapitoTelefonico = recapitoTelefonico;
     }
 
+    public override string ToString()
+    {
+        return $"nome utente: {nome}" + NewLine
+              +$"cognome utente: {cognome}";
+    }
 
     public string getCognome()
     {

@@ -6,6 +6,8 @@ using static System.Reflection.Metadata.BlobBuilder;
 var user = new Utenti("esposito", "Francesco", "kekkoesp8@gmail.com", "12345678", 34203096);
 var libri = new List<Libri>();
 var dvds = new List<Dvd>();
+var data = DateTime.Now;
+var datafine = new DateTime(2024, 8, 1, 0, 0, 0);
 
 Libri libro1 = new Libri("ISBN123", "Il Signore degli Anelli", 1954, "Fantasy", "S1", "J.R.R. Tolkien", 1178);
 Libri libro2 = new Libri("ISBN456", "Harry Potter e la Pietra Filosofale", 1997, "Fantasy", "S2", "J.K. Rowling", 223);
@@ -18,6 +20,9 @@ Dvd dvd2 = new Dvd("DVD002", "The Shawshank Redemption", 1994, "Drammatico", "S2
 Dvd dvd3 = new Dvd("DVD003", "Inception", 2010, "Fantascienza", "S3", "Christopher Nolan", 148);
 Dvd dvd4 = new Dvd("DVD004", "Il Padrino", 1972, "Drammatico", "S4", "Francis Ford Coppola", 175);
 Dvd dvd5 = new Dvd("DVD005", "La La Land", 2016, "Musicale", "S5", "Damien Chazelle", 128);
+Prestito loan = new Prestito(libro1 , user , data , datafine);
+Console.WriteLine("il documento preso in prestito e");
+Console.WriteLine(loan);
 
 libri.Add(libro1);
 libri.Add(libro2);
